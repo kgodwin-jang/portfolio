@@ -16,7 +16,7 @@
   <header class="site-header" id="home">
     <nav class="navbar container" aria-label="Main navigation">
       <a href="#home" class="brand">KG<span class="brand-symbol">&#8734;</span></a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-menu">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
@@ -24,9 +24,20 @@
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <!-- <div class="nav-actions">
-        <a href="#" class="btn btn-outline-white">&#8659;&nbsp;Download CV</a>
-      </div> -->
+      <div class="nav-actions">
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
 
     <section class="hero container">
@@ -197,7 +208,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </span>
-              <div><strong>Location</strong>Accra, Ghana</div>
+              <div><strong>Location</strong>Tamale, Ghana</div>
             </li><br>
           </ul>
           <a
@@ -236,10 +247,22 @@
       <button type="button" class="modal-close" data-close-modal aria-label="Close dialog">&times;</button>
       <p class="section-eyebrow">START CONSULTATION</p>
       <h2 class="modal-title" id="contact-choice-title">Choose how to contact me</h2>
-      <p class="modal-text">Pick the option that works best for you.</p>
+      <p class="modal-text modal-text-center">Pick your preferred communication channel to get started quickly.</p>
       <div class="modal-actions">
-        <button type="button" class="btn btn-primary" id="choose-email-btn">Email Me</button>
-        <a href="https://wa.me/233533496396" class="btn btn-whatsapp" id="choose-whatsapp-btn" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
+        <button type="button" class="choice-option" id="choose-email-btn">
+          <span class="choice-option-icon" aria-hidden="true">✉</span>
+          <span class="choice-option-content">
+            <span class="choice-option-title">Email</span>
+            <span class="choice-option-subtitle">Open the contact form popup</span>
+          </span>
+        </button>
+        <a href="https://wa.me/233533496396" class="choice-option choice-option-whatsapp" id="choose-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+          <span class="choice-option-icon" aria-hidden="true">💬</span>
+          <span class="choice-option-content">
+            <span class="choice-option-title">WhatsApp</span>
+            <span class="choice-option-subtitle">Start a direct chat instantly</span>
+          </span>
+        </a>
       </div>
     </div>
   </div>
